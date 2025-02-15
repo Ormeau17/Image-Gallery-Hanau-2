@@ -4,3 +4,5 @@ A simple and responsive Image Gallery built with HTML, CSS, and JavaScript. User
 
 Technologies used : HTML,CSS,JAVASCRIPT
 
+Clone the repository: bash git clone https://github.com/sushu39/Image-Gallery.git
+
