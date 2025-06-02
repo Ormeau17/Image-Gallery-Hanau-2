@@ -1,6 +1,9 @@
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: white;
     margin: 0;
@@ -16,11 +19,11 @@ header {
     color: white;
 }
 
-/* Gallery Layout (Masonry) */
+/* Gallery Layout (Responsive Masonry) */
 .gallery {
-    column-count: 3;
+    column-count: 4;
     column-gap: 1em;
-    max-width: 1200px;
+    max-width: 2000px;
     margin: auto;
     padding: 1em;
 }
@@ -35,20 +38,8 @@ header {
     break-inside: avoid;
 }
 
-@media (max-width: 1000px) {
-    .gallery {
-        column-count: 2;
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery {
-        column-count: 1;
-    }
-}
-
 .gallery-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Modal */
@@ -114,4 +105,23 @@ header {
     padding: 1em;
     font-size: 0.9em;
     color: #555;
+}
+
+/* Responsive Column Adjustments */
+@media (max-width: 1600px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 1000px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        column-count: 1;
+    }
 }
