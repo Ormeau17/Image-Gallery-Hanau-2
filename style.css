@@ -2,9 +2,11 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background-color: white;
     margin: 0;
     padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -14,29 +16,23 @@ header {
     color: white;
 }
 
-/* Gallery Layout */
+/* Gallery Layout (Masonry) */
 .gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px;
-}
-
-.image-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    max-width: 800px;
+    column-count: 3;
+    column-gap: 1em;
+    max-width: 1200px;
     margin: auto;
+    padding: 1em;
 }
 
 .gallery-img {
     width: 100%;
     height: auto;
+    margin-bottom: 1em;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    break-inside: avoid;
 }
 
 .gallery-img:hover {
@@ -47,18 +43,25 @@ header {
 .modal {
     display: none;
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 40px 10px;
 }
 
 .modal img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 90vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 /* Close Button */
@@ -67,26 +70,36 @@ header {
     top: 20px;
     right: 30px;
     font-size: 30px;
-    color: white;
+    color: #333;
     cursor: pointer;
 }
 
 /* Navigation Buttons */
 #prevBtn, #nextBtn {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.1);
     border: none;
-    padding: 10px;
-    font-size: 20px;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    color: #333;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 11;
 }
 
-#prevBtn { left: 10px; }
-#nextBtn { right: 10px; }
+#prevBtn { left: 20px; }
+#nextBtn { right: 20px; }
 
 #prevBtn:hover, #nextBtn:hover {
-    background: white;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #f0f0f0;
+    padding: 1em;
+    font-size: 0.9em;
+    color: #555;
 }
