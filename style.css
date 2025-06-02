@@ -14,9 +14,44 @@ body {
 
 /* Header */
 header {
-    padding: 20px;
-    background: #333;
-    color: white;
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 20px 40px;
+}
+
+.header-content {
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    text-align: left;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+.instagram-icon {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
 }
 
 /* Gallery Layout (Responsive Masonry) */
