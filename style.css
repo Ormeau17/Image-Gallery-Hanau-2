@@ -25,6 +25,7 @@ header {
     object-fit: contain;
     vertical-align: middle;
 }
+
 /* Gallery Layout (Responsive Masonry) */
 .gallery {
     column-count: 4;
