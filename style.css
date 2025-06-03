@@ -19,11 +19,24 @@ header {
     border-bottom: 1px solid black;
 }
 
-.instagram-icon {
-    width: 20px;
-    height: 20px;
+.social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.social a:hover {
+    opacity: 0.7;
+}
+
+img.instagram-icon {
+    width: 20px !important;
+    height: 20px !important;
     object-fit: contain;
-    vertical-align: middle;
+    display: inline-block;
 }
 
 /* Gallery Layout (Responsive Masonry) */
