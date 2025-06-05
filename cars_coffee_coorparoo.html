@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cars & Coffee Coorparoo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1 class="site-title">Cars & Coffee Coorparoo</h1>
+    <div class="nav-links">
+        <a href="index.html" class="home-button">← Home</a>
+    </div>
+</header>
+
+<section class="gallery">
+    <div class="image-container">
+        <!-- Add or remove image blocks as needed -->
+            <img src="images/cars_coffee_coorparoo/coorp_02.jpg" alt="Image 2" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_03.jpg" alt="Image 3" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_04.jpg" alt="Image 4" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_05.jpg" alt="Image 5" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_06.jpg" alt="Image 6" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_07.jpg" alt="Image 7" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_08.jpg" alt="Image 8" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_09.jpg" alt="Image 9" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_10.jpg" alt="Image 10" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_11.jpg" alt="Image 11" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_12.jpg" alt="Image 12" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_13.jpg" alt="Image 13" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_14.jpg" alt="Image 14" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_15.jpg" alt="Image 15" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_16.jpg" alt="Image 16" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_17.jpg" alt="Image 17" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_18.jpg" alt="Image 18" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_19.jpg" alt="Image 19" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_20.jpg" alt="Image 20" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_21.jpg" alt="Image 21" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_22.jpg" alt="Image 22" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_23.jpg" alt="Image 23" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_24.jpg" alt="Image 24" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_25.jpg" alt="Image 25" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_26.jpg" alt="Image 26" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_27.jpg" alt="Image 27" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_28.jpg" alt="Image 28" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_29.jpg" alt="Image 29" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_30.jpg" alt="Image 30" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_31.jpg" alt="Image 31" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_32.jpg" alt="Image 32" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_33.jpg" alt="Image 33" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_34.jpg" alt="Image 34" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_35.jpg" alt="Image 35" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_36.jpg" alt="Image 36" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_37.jpg" alt="Image 37" class="gallery-img" onclick="openModal(this)">
+            <img src="images/cars_coffee_coorparoo/coorp_38.jpg" alt="Image 38" class="gallery-img" onclick="openModal(this)">
+    </div>
+</section>
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-img">
+    <button id="prevBtn" onclick="prevImage()">&#10094;</button>
+    <button id="nextBtn" onclick="nextImage()">&#10095;</button>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Image Gallery. All Rights Reserved.</p>
+        <p>Designed and Developed by MICHAEL HANAU</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
