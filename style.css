@@ -100,22 +100,33 @@ img.instagram-icon {
 /* Floating HOME Button */
 .home-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(240, 240, 240, 0.9);
+    bottom: 24px;
+    right: 24px;
+    background: #fff;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    padding: 14px 16px;
     border: none;
-    padding: 12px 18px;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 50px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     z-index: 999;
-    transition: background 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-button svg {
+    width: 22px;
+    height: 22px;
+    fill: #000;
 }
 
 .home-button:hover {
-    background: rgba(220, 220, 220, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Gallery Layout (Responsive Masonry) */
@@ -138,7 +149,7 @@ img.instagram-icon {
 }
 
 .gallery-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Modal */
