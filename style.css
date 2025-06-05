@@ -33,67 +33,68 @@ header {
 }
 
 img.instagram-icon {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
     object-fit: contain;
     display: inline-block;
 }
 
-/* Homepage Responsive Grid for Categories */
-.categories {
+/* Homepage Grid Section */
+.category-selection {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2em;
-    padding: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
     max-width: 1400px;
     margin: auto;
 }
 
-/* Individual Category Cards */
-.category-card {
-    text-decoration: none;
-    color: black;
+/* Individual Category Card */
+.category-card a {
+    display: block;
+    background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.category-card a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.15);
 }
 
 .category-card img {
     width: 100%;
-    height: 200px; /* Change this value to your preferred image height */
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 5px; /* all corners rounded */
-    margin-bottom: 0;
+    display: block;
 }
 
-/* Title Styles */
 .category-card h2 {
-    margin: 0;
-    padding: 1em;
-    font-size: 1.1rem;
-    background: #fff;
-    border-radius: 0 0 12px 12px; /* Bottom corners rounded */
-    text-decoration: none;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
 }
 
-.category-card:hover {
-    transform: scale(1.03);
-}
-
-.category-card h2 a {
-    text-decoration: none;
-    color: black;
-}
-
-.category-card h2 a:visited {
-    color: black; /* Prevent purple links */
-}
-
+/* Back Link */
 .back-link {
     margin: 20px auto;
     text-align: center;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.back-link a:hover {
+    background: #e0e0e0;
 }
 
 /* Floating HOME Button */
@@ -117,17 +118,6 @@ img.instagram-icon {
     background: rgba(220, 220, 220, 0.95);
 }
 
-/* Optional: Remove underline on .back-link titles */
-.back-link a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-.back-link a:hover {
-    background: #e0e0e0;
-}
-
 /* Gallery Layout (Responsive Masonry) */
 .gallery {
     column-count: 4;
@@ -141,14 +131,14 @@ img.instagram-icon {
     width: 100%;
     height: auto;
     margin-bottom: 1em;
-    border-radius: 6px; /* Smaller roundness */
+    border-radius: 6px;
     cursor: pointer;
     transition: transform 0.25s ease;
     break-inside: avoid;
 }
 
 .gallery-img:hover {
-    transform: scale(1.05); /* Subtle zoom */
+    transform: scale(1.05);
 }
 
 /* Modal */
@@ -216,7 +206,7 @@ img.instagram-icon {
     color: #555;
 }
 
-/* Responsive Column Adjustments */
+/* Responsive Gallery Columns */
 @media (max-width: 1600px) {
     .gallery {
         column-count: 3;
@@ -233,11 +223,4 @@ img.instagram-icon {
     .gallery {
         column-count: 1;
     }
-}
-
-/* Accessibility: Focus states */
-a:focus,
-button:focus {
-    outline: 2px solid #000;
-    outline-offset: 2px;
 }
