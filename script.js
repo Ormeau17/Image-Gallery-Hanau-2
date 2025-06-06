@@ -26,8 +26,21 @@ function nextImage() {
 }
 
 // Close modal when clicking outside the image
-modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
-        closeModal();
+document
+  .querySelector(".modal-bg-close")
+  .addEventListener("click", function () {
+    document.querySelector(".modal").style.display = "none";
+  });
+
+document.addEventListener("keydown", function (e) {
+  const modal = document.querySelector(".modal");
+  if (modal.style.display === "flex") {
+    if (e.key === "ArrowLeft") {
+      document.getElementById("prevBtn")?.click();
+    } else if (e.key === "ArrowRight") {
+      document.getElementById("nextBtn")?.click();
+    } else if (e.key === "Escape") {
+      modal.style.display = "none";
     }
+  }
 });
