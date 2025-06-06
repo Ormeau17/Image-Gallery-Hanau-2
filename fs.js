@@ -1,4 +1,6 @@
-for (let i = 1; i <= 104; i++) {
+for (let i = 1; i <=127; i++) {
   let padded = i.toString().padStart(2, '0');
-  console.log(`<img src="images/ducati_1098/ducati_1098_${padded}.jpg" alt="Image ${i}" class="gallery-img" onclick="openModal(this)">`);
+  console.log(
+    `<img src="images/grip_attack_lakside/grip_${padded}.jpg" alt="Image ${i}" class="gallery-img" onclick="openModal(this)">`
+  );
 }
