@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-weight: 400; /* Try 400 for normal, 500 for medium, 700 for bold */
+}
+
 /* Header */
 header {
   padding: 20px;
