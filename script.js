@@ -79,9 +79,3 @@ function handleSwipeGesture() {
     prevImage();
   }
 }
-document.getElementById("prevBtn").addEventListener("click", function () {
-  this.blur();
-});
-document.getElementById("nextBtn").addEventListener("click", function () {
-  this.blur();
-});
